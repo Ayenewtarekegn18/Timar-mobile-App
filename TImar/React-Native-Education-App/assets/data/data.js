@@ -3,8 +3,8 @@ import { images } from '..';
 const { teacher1, teacher2, teacher3, teacher4, school1, school2, school3 } =
   images;
 export const welcomeScreenData = {
-  title: `Let's find the "A" with us`,
-  subtitle: `Please Sign in to view personalized recommendations`,
+  title: `Join Timar to Kick Start Your Lesson`,
+  subtitle: `Join and Learn from our Top Instructors!`,
 };
 
 export const gradesData = [

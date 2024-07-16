@@ -26,15 +26,22 @@ export default function WelcomeScreen() {
           <Text className="text-darkGrayText text-lg text-center font-exo">
             {welcomeScreenData.subtitle}
           </Text>
+          
         </View>
 
         {/** ====================== Action button ============================= */}
-        <Button
-          primaryBtnText={'Sign Up'}
-          onPrimaryBtnPress={() => navigation.navigate('SignUp')}
-          secondaryBtnText2={'Skip'}
-          onSecondaryBtnPress={() => navigation.navigate('SignIn')}
-        />
+        
+        <View style={{ marginLeft: '4%',marginRight:'2%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '70%', gap: 10 }}>
+          <Button showPrimaryBtn ="true"
+            primaryBtnText={'Sign In'}
+            onPrimaryBtnPress={() => navigation.navigate('SignIn')}
+          />
+          <Button
+            showPrimaryBtn ="true"
+            primaryBtnText={'Sign Up'}
+            onPrimaryBtnPress={() => navigation.navigate('SignUp')}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );

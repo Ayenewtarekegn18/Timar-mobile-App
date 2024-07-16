@@ -5,21 +5,26 @@ const Button = ({
   onPrimaryBtnPress,
   primaryBtnText,
   showSecondaryBtn = true,
+  showPrimaryBtn = false,
   secondaryBtnText1,
   secondaryBtnText2,
   onSecondaryBtnPress,
+  
+
 }) => {
   return (
     <View className="flex flex-col items-center gap-8">
       {/** ====================== Main Button ============================= */}
-      <Pressable
-        onPress={onPrimaryBtnPress}
-        className="py-3 bg-bgPurple px-7 rounded-xl w-[267px] max-h-[61px] flex items-center justify-center"
-      >
-        <Text className="text-xl font-exoSemibold text-center text-bgWhite">
-          {primaryBtnText}
-        </Text>
-      </Pressable>
+      {showPrimaryBtn && ( // Use the prop to conditionally render the primary button
+        <Pressable
+          onPress={onPrimaryBtnPress}
+          className="py-3 bg-bgPurple px-7 rounded-xl w-[180px] max-h-[61px] flex items-center justify-center"
+        >
+          <Text className="text-xl font-exoSemibold text-center text-bgWhite">
+            {primaryBtnText}
+          </Text>
+        </Pressable>
+        )}
       {/** ====================== Secondary pressable ============================= */}
       {showSecondaryBtn ? (
         <View className="flex-row justify-center">

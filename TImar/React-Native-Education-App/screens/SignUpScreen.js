@@ -4,6 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { images } from '../assets';
 import Button from '../components/button';
+import Button2 from '../components/button2';
+
 import Input from '../components/input';
 import { EyeIcon } from 'react-native-heroicons/solid';
 
@@ -30,22 +32,27 @@ export default function SignUpScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-bgWhite px-8">
-      <View className="flex-1 flex justify-around">
-        {/** ====================== Image ============================= */}
-        <View className="flex-row justify-center mb-[-15%] mt-[-10%]">
-          <Image source={signup} style={{ width: 353, height: 235 }} />
-        </View>
+      <View className="mt-10 flex justify-around">
+      <Text className="text-blackText text-3xl text-center font-exoSemibold mb-3">
+              Sign Up
+            </Text>
         {/** ====================== Sign Up inputs ============================= */}
-        <View className="flex flex-col w-full items-center justify-center mt-3">
+        <View className="flex flex-col w-full items-center justify-center mb-5" >
           <Input
-            label={'Name'}
-            placeholder={'Your name'}
+            label={'First Name'}
+            placeholder={'First name'}
             value={userData.name}
             onChange={(text) => handleInputChange('name', text)}
           />
           <Input
-            label={'Email address'}
-            placeholder={'name@example.om'}
+            label={'Last Name'}
+            placeholder={'Last name'}
+            value={userData.name}
+            onChange={(text) => handleInputChange('name', text)}
+          />
+          <Input
+            label={'Phone Number'}
+            placeholder={'+251******'}
             onChange={(text) => handleInputChange('email', text)}
           />
           <Input
@@ -55,16 +62,28 @@ export default function SignUpScreen() {
             onChange={(text) => handleInputChange('password', text)}
             last
           />
+          <Input
+            label={'Confirm Password'}
+            placeholder={'********'}
+            Icon={EyeIcon}
+            onChange={(text) => handleInputChange('password', text)}
+            last
+          />
         </View>
 
         {/** ====== Action button -> Navigation to grade selection screen ======= */}
+        <View style={{flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', gap: 30 }}>
+
+        <Button2
+        bigBtnText={'Sign Up'}
+        onbigBtnPress={handleSubmit}
+        />
         <Button
-          primaryBtnText={'Sign Up'}
-          onPrimaryBtnPress={handleSubmit}
           secondaryBtnText1={'Already have an account?'}
           secondaryBtnText2={'Sign In'}
           onSecondaryBtnPress={() => navigation.navigate('SignIn')}
         />
+        </View>
       </View>
     </SafeAreaView>
   );
