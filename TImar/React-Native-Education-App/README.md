@@ -1,4 +1,4 @@
-# Education App for the Senior React Native Developer Assignment
+# Timar
 
 ![Home Screen](https://i.imgur.com/gZgeRnZ.png)
 
@@ -21,7 +21,7 @@ These instructions will help you get the project up and running on your local ma
 2. **Cloning the Repository:** Clone the repository and run the following command to install the necessary dependencies:
 
    ```bash
-   git clone https://github.com/mxnuchim/React-Native-Education-App.git
+   git clone https://github.com/Ayenewtarekegn18/Timar-mobile-App.git
    ```
 
 3. **Navigate to the App's location:** Clone the repository and run the following command to install the necessary dependencies:
@@ -61,8 +61,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 If you have any questions or need further assistance, feel free to contact us:
 
-- Your Name: Manuchimso Oliver
-- Email: manuchimoliver779@gmail.com
-- Website: https://www.manuchim.com
+Adane Moges: [adanemoges6@gmail.com]
+Amanuel Mandefrow: [amanuel.mandefrow@a2sv.org]
+Nathnael Worku: [nathnael.worku@a2sv.org]
+Ayenew Tarekegn: [ayenew.tarekegn@a2sv.org]
 
 Thank you very much for the project! I enjoyed building it.
