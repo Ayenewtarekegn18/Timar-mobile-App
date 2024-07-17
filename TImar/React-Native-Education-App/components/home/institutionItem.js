@@ -4,33 +4,33 @@ import Rating from './rating';
 
 const InstitutionItem = ({ institution }) => {
   return (
-    <View className="bg-white rounded-xl flex flex-row w-full min-h-[176px] items-center justify-between p-2 mb-4 shadow">
+    <View className="bg-white rounded-xl flex flex-col w-[50%] h-[250px] items-center justify-start shadow mt-4" >
       {/**============== Institution Image ================ */}
-      <View className="rounded-xl">
-        <Image source={institution.image} style={{ height: 150, width: 140 }} />
+
+
+      <View className="rounded-xl w-full h-[50%] mb-1">
+        <Image source={institution.image} style={{ width: '100%', height: '100%' }} // Adjust the width and height
+          resizeMode="cover"  />
       </View>
 
-      {/**============== Institution information ================ */}
-      <View className="w-[52%] h-full flex-col flex space-y-1 py-2">
-        <Text className="font-exoSemibold text-darkGrayText text-xl capitalize">
+     { /**============== Institution information ================ */}
+      <View className="flex flex-row items-center justify-start w-full mb-2">
+        <Text className="font-bold text-darkGrayText text-xs capitalize mr-5">
           {institution.name}
         </Text>
 
         {/**============== Rating and reviews ================ */}
-        <View className="flex flex-row items-center space-x-2">
           <Rating rating={institution.rating} />
-          <Text className="font-roboto text-darkGrayText text-xs text-left">
-            {institution.rating + '  ' + `(${institution.reviews})`}
-          </Text>
+          
         </View>
-        <View className="flex flex-col space-y-1">
+        <View className="flex flex-col">
           <Text className="font-robotoBold text-darkGrayText text-sm capitalize">
             {institution.field}
           </Text>
           <Text className="font-roboto text-xs">{institution.description}</Text>
         </View>
       </View>
-    </View>
+    
   );
 };
 

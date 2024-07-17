@@ -133,7 +133,7 @@ export default function HomeScreen() {
         className=" h-full w-full"
       >
         {/** ========================= Teachers Section =========================== */}
-        <View className="mt-2">
+       {/**  <View className="mt-2">
           <SectionHeader
             title={'Popular Teachers'}
             onFilterPress={toggleTeachersFilter}
@@ -142,10 +142,10 @@ export default function HomeScreen() {
                 ? themeColors.bgPurple
                 : themeColors.lightGrayText
             }
-          />
+          />*/}
 
           {/**============== Teacher Filters ==================== */}
-          {teachersFilterVisible ? (
+         {/**  {teachersFilterVisible ? (
             <View className="flex flex-col my-5 space-y-2">
               <AreaFilter filters={areaFilters} />
               <SubjectFilter
@@ -154,10 +154,10 @@ export default function HomeScreen() {
               />
             </View>
           ) : null}
-
+                */}
           {/** ========================= Render List of Teachers =========================== */}
 
-          <FlatList
+         {/** <FlatList
             data={teachers}
             horizontal={true}
             className="w-full py-4 bg-transparent"
@@ -165,12 +165,12 @@ export default function HomeScreen() {
             keyExtractor={(item, index) => item.name}
             showsHorizontalScrollIndicator={false}
           />
-        </View>
+        </View> */}
 
         {/** ========================= Institutions Section =========================== */}
         <View className="mt-2">
           <SectionHeader
-            title={'Popular Institutions'}
+            title={'Popular Courses'}
             onFilterPress={toggleInstitutionsFilter}
             tintColor={
               institutionsFilterVisible
@@ -188,13 +188,14 @@ export default function HomeScreen() {
 
           {/** ========================= Render List of institutions =========================== */}
           <View
-            className={`w-full bg-transparent ${
-              institutionsFilterVisible ? 'pt-0' : 'pt-4'
-            }`}
+            
+            className={` flex flex-row flex-wrap w-full bg-transparent ${
+              institutionsFilterVisible ? 'pt-4' : 'pt-4'
+            } mr-8 ` }
           >
             {institutions.map((institution, index) => (
-              <InstitutionItem institution={institution} key={index} />
-            ))}
+             institution ? <InstitutionItem style={{margin: 20}}
+              institution={institution} key={index} />:null))}
           </View>
         </View>
       </ScrollView>

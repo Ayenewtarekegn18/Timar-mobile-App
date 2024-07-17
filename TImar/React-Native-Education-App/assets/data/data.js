@@ -55,11 +55,10 @@ export const institutionData = [
     field: 'Bio Science',
     description:
       'Studying how CBD awareness and availability as it related to pain management alternatives.',
-    rating: '4.5',
     reviews: '413',
     image: school1,
   },
-  {
+ {
     name: 'New Montana',
     field: 'Bio Science',
     description:
